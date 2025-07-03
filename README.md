@@ -1,3 +1,8 @@
+My portfolio hecho en Astro
+
+![image](https://github.com/user-attachments/assets/67f8fe6f-c673-42ab-99b9-639d24bfd3da)
+
+
 # Astro Starter Kit: Basics
 
 ```sh
