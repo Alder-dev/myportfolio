@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkdedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import CVIcon from "../components/icons/CV.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import UserIcon from "../components/icons/User.astro";
+
+---
+
+<Layout>
+  <main class="px-4">
+    <SectionContainer class="py-45 pb-20">
+      <img
+        src="/img/alderph.jpg"
+        alt="Alder's Logo"
+        class="rounded-full w-13 h-14 mb-2"
+      />
+      <h1
+        class="text-white text-2xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10"
+      >
+        Hola, Soy Alder Andres!
+        <a
+          href="https://www.linkedin.com/in/alder-andres/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center hover:scale-105 transition"
+        >
+          <Badge>Open to work</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl text-wrap">
+        <span>Ingeniero de Sistemas.</span>
+        <span class="text-blue-100/90"
+          >Desarrollador de Software y Tecnólogo en Gestión de Redes de Datos
+          con más de 3 años de experiencia en desarrollo de software y análisis
+          de datos.</span
+        >
+        <span class="text-green-100/80"
+          >Como proyecto propio, actualmente, desarrollo una aplicación móvil de
+          realidad aumentada llamada Animalia AR, para la conservación de
+          especies de fauna en peligro de extinción, integrando ARCore y Vuforia
+          para una experiencia inmersiva y educativa.</span
+        >
+      </h2>
+
+      <nav class="flex gap-2 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/alder-andres/">
+          <LinkdedInIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Alder-dev">
+          <GitHubIcon class="w-6 h-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:pkeiner08@gmail.com">
+          <MailIcon class="w-6 h-6" />
+          pkeiner08@gmail.com
+        </SocialPill>
+        <SocialPill href="https://drive.google.com/file/d/1NLLMU3nRrpFijQE1lelAn_c6AEs1uXEy/view?usp=sharing">
+          <CVIcon class="w-6 h-6" />
+          Descargar CV
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-2 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-2 flex gap-x-3 items-center pb-2">
+        <CodeIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="text-3xl font-semibold mb-2 flex gap-x-3 items-center pb-2">
+        <UserIcon class="size-6" />
+        Sobre mi
+      </h2>
+      <div>
+        <p class="text-xm text-wrap text-pretty text-green-100/80">
+          Soy Alder Andrés Palacios, Ingeniero de Sistemas y Tecnólogo en
+          Gestión de Redes de Datos, apasionado por la tecnología, el desarrollo
+          de software y las soluciones que impactan positivamente en la
+          sociedad. Con más de 4 de experiencia, he trabajado en proyectos que
+          van desde plataformas educativas y sistemas de información hasta
+          aplicaciones inmersivas con realidad aumentada para el turismo
+          ambiental.
+        </p>
+        <p class="text-xm text-wrap text-pretty mt-4 text-green-100/80">
+          Mi enfoque se centra en crear soluciones eficientes,
+          accesibles y escalables. Domino tecnologías como JavaScript, PHP,
+          Python, C#, y frameworks como Laravel, Flask, Unity, Astro y
+          WordPress. Además, tengo experiencia con Docker, MongoDB, MySQL, CKAN
+          y he liderado desarrollos para marketplaces, formularios dinámicos, e
+          integraciones con APIs. Me motiva el aprendizaje constante y la
+          posibilidad de aplicar mis conocimientos para transformar ideas en
+          realidades digitales. Cuando no estoy programando, me dedico a crear
+          contenido, optimizar equipos y apoyar procesos comunitarios de
+          desarrollo tecnológico.
+        </p>
+        <p class="text-xm text-wrap text-pretty mt-4 text-green-100/80">
+          Nivel de ingles: B1
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>

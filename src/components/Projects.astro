@@ -1,0 +1,134 @@
+---
+import HTMLIcon from "../components/icons/Html.astro";
+import CSSIcon from "../components/icons/Css.astro";
+import JSIcon from "../components/icons/Js.astro";
+import PHPIcon from "../components/icons/PHP.astro";
+import MongoIcon from "../components/icons/Mongo.astro";
+import CSharpIcon from "../components/icons/CSharp.astro";
+import UnityIcon from "../components/icons/Unity.astro";
+import SQLIcon from "../components/icons/Sql.astro";
+import MySQLIcon from "../components/icons/MySQL.astro";
+import O365Icon from "../components/icons/O365.astro";
+import VuforiaIcon from "../components/icons/Vuforia.astro";
+import ArcoreIcon from "../components/icons/ARCore.astro";
+import PyIcon from "../components/icons/Python.astro";
+import JupyterIcon from "../components/icons/Jupyter.astro";
+import PowerBIIcon from "../components/icons/PowerBI.astro";
+
+const PROJECTS = [
+  {
+    title: "Mi vacuna",
+    description:
+      "Plataforma de gestión de vacunación: Desarrollo con PHP (CodeIgniter diseño MVC), HTML5, CSS3, JavaScript y MongoDB para el control y seguimiento de vacunaciones durante la pandemia.",
+    source: "https://github.com/Alder-dev/mivacuna",
+    image: "/img/vacuna.webp",
+    tags: [
+      { name: "HTML", icon: HTMLIcon },
+      { name: "CSS", icon: CSSIcon },
+      { name: "JavaScript", icon: JSIcon },
+      { name: "PHP", icon: PHPIcon },
+      { name: "MongoDB", icon: MongoIcon },
+    ],
+  },
+  {
+    title: "Animalia AR",
+    description:
+      "Aplicación móvil de realidad aumentada para la conservación de especies en peligro de extinción, utilizando ARCore y Vuforia para una experiencia inmersiva.",
+    source:
+      "https://drive.google.com/file/d/1QWmeADF-be4CwNCD6Np5vmxITCF81s67/view?usp=sharing",
+    image: "/img/animalia.webp",
+    tags: [
+      { name: "Unity", icon: UnityIcon },
+      { name: "C#", icon: CSharpIcon },
+      { name: "ARCore", icon: ArcoreIcon },
+      { name: "Vuforia", icon: VuforiaIcon },
+    ],
+  },
+  {
+    title: "Analisis y prediccion de homicidios",
+    description:
+      "Proyecto de análisis de datos y predicción de homicidios utilizando Python, Jupyter, Pandas, Matplotlib y Scikit-learn para identificar patrones y tendencias.",
+    source: "https://github.com/Alder-dev/analisis_homicidios",
+    image: "/img/homicidios.webp",
+    tags: [
+      { name: "Python", icon: PyIcon },
+      { name: "Jupyter", icon: JupyterIcon },
+    ],
+  },
+  {
+    title: "Calculadora",
+    description:
+      "Calculadora desarrollada con HTML, CSS y JavaScript, que permite realizar operaciones matemáticas de manera interactiva.",
+    source: "https://github.com/Alder-dev/cientific-calc",
+    image: "/img/calculadora.webp",
+    tags: [
+      { name: "HTML", icon: HTMLIcon },
+      { name: "CSS", icon: CSSIcon },
+      { name: "JavaScript", icon: JSIcon },
+    ],
+  },
+  {
+    title: "Piedra, papel o tijera",
+    description:
+      "Juego clásico de piedra, papel o tijera para uno o dos jugadores, desarrollado con HTML, CSS y JavaScript, que permite jugar contra la computadora.",
+    source: "https://github.com/Alder-dev/cientific-calc",
+    image: "/img/ppt.webp",
+    tags: [
+      { name: "HTML", icon: HTMLIcon },
+      { name: "CSS", icon: CSSIcon },
+      { name: "JavaScript", icon: JSIcon },
+    ],
+  },
+  {
+    title: "Inteligencia de negocio para la educación",
+    description:
+      "Solucion de inteligencia de negocio para el apoyo a la toma de decisiones en pro de fortalecer la calidad de la educacion básica y media del departamento del choco",
+    source:
+      "https://drive.google.com/file/d/1TVTtDYgbP8DpS1IG7Ng3i3FGFOhlINwE/view?usp=sharing",
+    image: "/img/educacion.webp",
+    tags: [
+      { name: "O365", icon: O365Icon },
+      { name: "Power BI", icon: PowerBIIcon },
+      { name: "SQL", icon: SQLIcon },
+      { name: "MySQL", icon: MySQLIcon },
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags, source }) => (
+    <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+      <h3 class="text-xl font-semibold mb-2 text-blue-100/90">{title}</h3>
+      <p class="text-gray-700 dark:text-gray-300 mb-4 text-pretty">
+        {description}
+      </p>
+
+      <div class="flex flex-row items-center flex-wrap gap-4 mb-4">
+        {tags.map(({ name, icon: Icon }) => (
+          <span class="rounded-full border border-white/50 flex justify-center items-center gap-x-2 py-1 px-2 lg:py-1 lg:px-4 bg-white/10 hover:scale-105 hover:bg-white/20 transition">
+            <div title={name} class="size-8 flex items-center justify-center">
+              <Icon class="w-full h-full" />
+            </div>
+            <span class="text-sm text-gray-200">{name}</span>
+          </span>
+        ))}
+      </div>
+      <div class="mb-4">
+        <a
+          href={source}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sky-400 hover:underline"
+        >
+          Ver mas detalles
+        </a>
+      </div>
+      <img
+        src={image}
+        alt={title}
+        class="rounded-lg shadow-2xl shadow-white/10"
+      />
+    </article>
+  ))
+}

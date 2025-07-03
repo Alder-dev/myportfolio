@@ -1,0 +1,89 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Asistente de Procesos Tecnológicos ",
+    descriptions: [
+      "Participación como personal de apoyo tecnológico, brindando soporte y capacitación en la implementación, optimización del sistema y de otras plataformas de gestión académica, ambiente virtual y entrenamiento de pruebas saber a mas de 20 Instituciones Eductivas del Chocó.",
+    ],
+    links: [
+      {
+        label: "Gestion academica",
+        url: "https://academico.calidadeducativachoco.edu.co",
+      },
+      {
+        label: "Pruebas saber",
+        url: "https://saber.calidadeducativachoco.edu.co",
+      },
+    ],
+  },
+  {
+    date: "09/2024 – 12/2024",
+    title: "Desarrollador Web Full Stack",
+    descriptions: [
+      "Desarrollo e implementación de la plataforma PotenciAfroConéctaTech, que integró:",
+      "Marketplace que visibiliza y comercializa productos,afrodescendientes, con herramientas personalizables y seguras, con más de 60 tiendas activas.",
+      "Implementación completa con WordPress, optimizando rendimiento y usabilidad.",
+    ],
+    links: [
+      {
+        label: "PotenciAfroConectaTech",
+        url: "https://potenciafroconectatech.com/",
+      },
+    ],
+  },
+  {
+    date: "02/2024 – 01/2025 ",
+    title: "Desarrollador Web/Asistente de Procesos Tecnológicos",
+    descriptions: [
+      "Desarrollo de un repositorio de datos abiertos con Python (Flask, integrando CKAN) para la generación y publicación de datos abiertos de la calidad educativa de más de 60 instituciones del departamento del chocó. Participación como personal de apoyo tecnológico, brindando soporte y capacitación en la implementación, optimización del sistema y de otras plataformas de gestión académica, ambiente virtual y entrenamiento de pruebas saber a mas de 20 Instituciones Eductivas del Chocó.",
+    ],
+    links: [
+      {
+        label: "Datos abiertos",
+        url: "https://datos.investigacioneducativachoco.edu.co/",
+      },
+      {
+        label: "Gestion academica",
+        url: "https://academico.investigacioneducativachoco.edu.co",
+      },
+      {
+        label: "Pruebas saber",
+        url: "https://saber.investigacioneducativachoco.edu.co",
+      },
+    ],
+  },
+  {
+    date: "09/2020 - Actualmente...",
+    title: "Freelancer",
+    descriptions: [
+      "Desarrollo web: Creación de una página de noticias y convocatorias para la entidad Unión Temporal, utilizando PHP y WordPress.",
+      "Gestión documental y ofimática: Implementación y administración de Microsoft SharePoint y Microsoft 365.",
+      "Soporte TI: Asistencia técnica en hardware, software y redes.",
+      "Animalia AR: Desarrollo de una aplicación móvil con Unity, Vuforia y AR Fundation para la conservación de especies de fauna en peligro de extinción de la region del pacifico.",
+    ],
+    links: [
+      {
+        label: "Unión Temporal",
+        url: "https://utterritorio.com",
+      },
+      {
+        label: "Animalia AR",
+        url: " ",
+      },
+    ],
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-4">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
