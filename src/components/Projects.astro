@@ -14,8 +14,27 @@ import ArcoreIcon from "../components/icons/ARCore.astro";
 import PyIcon from "../components/icons/Python.astro";
 import JupyterIcon from "../components/icons/Jupyter.astro";
 import PowerBIIcon from "../components/icons/PowerBI.astro";
+import ReactIcon from "../components/icons/React.astro";
+import ASPIcon from "../components/icons/ASP.astro";
+import TsIcon from "../components/icons/Ts.astro";
+
 
 const PROJECTS = [
+  {
+    title: "React Peliculas",
+    description:
+      "Aplicación web de peliculas: Desarrollo con React, HTML5, TypeScript y Asp.NET Core para la gestión de peliculas y usuarios.",
+    source: "https://github.com/Alder-dev/react-peliculas",
+    url: "https://react-peliculas-rho.vercel.app",
+    image: "/img/peliculas.webp",
+    tags: [
+      { name: "TypeScript", icon: TsIcon },
+      { name: "React", icon: ReactIcon },
+      { name: "ASP.NET Core", icon: ASPIcon },
+      { name: "SQL", icon: SQLIcon },
+      { name: "HTML", icon: HTMLIcon },
+    ]
+  },
   {
     title: "Mi vacuna",
     description:
@@ -56,30 +75,6 @@ const PROJECTS = [
     ],
   },
   {
-    title: "Calculadora",
-    description:
-      "Calculadora desarrollada con HTML, CSS y JavaScript, que permite realizar operaciones matemáticas de manera interactiva.",
-    source: "https://github.com/Alder-dev/cientific-calc",
-    image: "/img/calculadora.webp",
-    tags: [
-      { name: "HTML", icon: HTMLIcon },
-      { name: "CSS", icon: CSSIcon },
-      { name: "JavaScript", icon: JSIcon },
-    ],
-  },
-  {
-    title: "Piedra, papel o tijera",
-    description:
-      "Juego clásico de piedra, papel o tijera para uno o dos jugadores, desarrollado con HTML, CSS y JavaScript, que permite jugar contra la computadora.",
-    source: "https://github.com/Alder-dev/cientific-calc",
-    image: "/img/ppt.webp",
-    tags: [
-      { name: "HTML", icon: HTMLIcon },
-      { name: "CSS", icon: CSSIcon },
-      { name: "JavaScript", icon: JSIcon },
-    ],
-  },
-  {
     title: "Inteligencia de negocio para la educación",
     description:
       "Solucion de inteligencia de negocio para el apoyo a la toma de decisiones en pro de fortalecer la calidad de la educacion básica y media del departamento del choco",
@@ -109,10 +104,10 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags, source }) => (
-    <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+  PROJECTS.map(({ image, title, description, tags, source, url }) => (
+    <article class="bg-gray-800 dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
       <h3 class="text-xl font-semibold mb-2 text-blue-100/90">{title}</h3>
-      <p class="text-gray-700 dark:text-gray-300 mb-4 text-pretty">
+      <p class="text-gray-100 dark:text-gray-100 mb-4 text-pretty">
         {description}
       </p>
 
@@ -133,8 +128,19 @@ const PROJECTS = [
           rel="noopener noreferrer"
           class="text-sky-400 hover:underline"
         >
-          Ver mas detalles
+          Ver mas detalles 
         </a>
+        {url && (
+          <p></p>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-400 hover:underline"
+          >
+            Ver demo
+          </a>
+        )}
       </div>
       <img
         src={image}
