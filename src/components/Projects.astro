@@ -17,22 +17,24 @@ import PowerBIIcon from "../components/icons/PowerBI.astro";
 import ReactIcon from "../components/icons/React.astro";
 import ASPIcon from "../components/icons/ASP.astro";
 import TsIcon from "../components/icons/Ts.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
 
 
 const PROJECTS = [
   {
     title: "React Peliculas",
     description:
-      "Aplicación web de peliculas: Desarrollo con React, HTML5, TypeScript y Asp.NET Core para la gestión de peliculas y usuarios.",
+      "Aplicación web de peliculas: Desarrollo con React, TailwindCss, TypeScript y Asp.NET Core para la gestión de peliculas y usuarios.",
     source: "https://github.com/Alder-dev/react-peliculas",
+    sourcebk: "https://github.com/Alder-dev/peliculasApi",
     url: "https://react-peliculas-rho.vercel.app",
     image: "/img/peliculas.webp",
     tags: [
       { name: "TypeScript", icon: TsIcon },
       { name: "React", icon: ReactIcon },
+      { name: "TailwindCss", icon: TailwindIcon },
       { name: "ASP.NET Core", icon: ASPIcon },
       { name: "SQL", icon: SQLIcon },
-      { name: "HTML", icon: HTMLIcon },
     ]
   },
   {
@@ -104,7 +106,7 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags, source, url }) => (
+  PROJECTS.map(({ image, title, description, tags, source, sourcebk, url }) => (
     <article class="bg-gray-800 dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
       <h3 class="text-xl font-semibold mb-2 text-blue-100/90">{title}</h3>
       <p class="text-gray-100 dark:text-gray-100 mb-4 text-pretty">
@@ -130,6 +132,17 @@ const PROJECTS = [
         >
           Ver mas detalles 
         </a>
+        {sourcebk && (
+          <p></p>
+          <a
+            href={sourcebk}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-400 hover:underline"
+          >
+            Ver codigo fuente (Backend)
+          </a>
+        )}
         {url && (
           <p></p>
           <a
