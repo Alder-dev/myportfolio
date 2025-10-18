@@ -12,7 +12,8 @@ import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import UserIcon from "../components/icons/User.astro";
-
+import COIcon from "../components/icons/CO.astro";
+import USIcon from "../components/icons/US.astro";
 ---
 
 <Layout>
@@ -64,10 +65,59 @@ import UserIcon from "../components/icons/User.astro";
           <MailIcon class="w-6 h-6" />
           pkeiner08@gmail.com
         </SocialPill>
-        <SocialPill href="Alder_Palacios_Palacios.pdf" download="CV-Alder-Palacios.pdf">
+        <button
+          id="dropdownHoverButton"
+          data-dropdown-toggle="dropdownHover"
+          data-dropdown-trigger="hover"
+          class="rounded-full border border-white/50 flex justify-center items-center gap-x-2 py-1 px-2 lg:py-2 lg:px-4 bg-white/10 hover:scale-105 hover:bg-white/20 transition"
+          type="button"
+          >
           <CVIcon class="w-6 h-6" />
-          Descargar CV
-        </SocialPill>
+          Descargar CV<svg
+            class="w-2.5 h-2.5 ms-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"></path>
+          </svg>
+        </button>
+        <div
+          id="dropdownHover"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownHoverButton"
+          >
+            <li>
+              <a
+                href="Alder_Palacios_Palacios-SP.pdf" download="CV-Alder-Palacios-SP.pdf"
+                class="flex flex-row items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                target="_blank"
+                >
+                <COIcon class="w-6 h-6" />
+                Español (es-co)</a
+              >
+            </li>
+            <li>
+              <a
+                href="Alder_Palacios_Palacios-ENG.pdf" download="CV-Alder-Palacios-ENG.pdf"
+                class="flex flex-row items-center block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                target="_blank"
+                >
+                <USIcon class="w-6 h-6" />
+                English (en-us)</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
     </SectionContainer>
 
@@ -97,25 +147,26 @@ import UserIcon from "../components/icons/User.astro";
           Soy Alder Andrés Palacios, Ingeniero de Sistemas y Tecnólogo en
           Gestión de Redes de Datos, apasionado por la tecnología, el desarrollo
           de software y las soluciones que impactan positivamente en la
-          sociedad. Con más de 3 años de experiencia, he trabajado en proyectos que
-          van desde plataformas educativas y sistemas de información hasta
+          sociedad. Con más de 3 años de experiencia, he trabajado en proyectos
+          que van desde plataformas educativas y sistemas de información hasta
           aplicaciones inmersivas con realidad aumentada para el turismo
           ambiental.
         </p>
         <p class="text-xm text-wrap text-pretty mt-4 text-green-100/80">
-          Mi enfoque se centra en crear soluciones eficientes,
-          accesibles y escalables. Domino tecnologías como JavaScript, PHP,
-          Python, C#, y frameworks como Laravel, Flask, Unity, Astro y
-          WordPress. Además, tengo experiencia con Docker, MongoDB, MySQL, CKAN
-          y he liderado desarrollos para marketplaces, formularios dinámicos, e
-          integraciones con APIs. Me motiva el aprendizaje constante y la
-          posibilidad de aplicar mis conocimientos para transformar ideas en
-          realidades digitales. Cuando no estoy programando, me dedico a crear
-          contenido, optimizar equipos y apoyar procesos comunitarios de
-          desarrollo tecnológico.
+          Mi enfoque se centra en crear soluciones eficientes, accesibles y
+          escalables. Domino tecnologías como JavaScript, PHP, Python, C#, y
+          frameworks como Laravel, Flask, Unity, Astro y WordPress. Además,
+          tengo experiencia con Docker, MongoDB, MySQL, CKAN y he liderado
+          desarrollos para marketplaces, formularios dinámicos, e integraciones
+          con APIs. Me motiva el aprendizaje constante y la posibilidad de
+          aplicar mis conocimientos para transformar ideas en realidades
+          digitales. Cuando no estoy programando, me dedico a crear contenido,
+          optimizar equipos y apoyar procesos comunitarios de desarrollo
+          tecnológico.
         </p>
         <p class="text-xm text-wrap text-pretty mt-4 text-green-100/80">
           Nivel de ingles: B1
+        </p>
       </div>
     </SectionContainer>
   </main>
