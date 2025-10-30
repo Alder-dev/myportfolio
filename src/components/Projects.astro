@@ -18,20 +18,33 @@ import ReactIcon from "../components/icons/React.astro";
 import ASPIcon from "../components/icons/ASP.astro";
 import TsIcon from "../components/icons/Ts.astro";
 import TailwindIcon from "../components/icons/Tailwind.astro";
-
+import NestIcon from "../components/icons/Nest.astro";
+import PostgreSQLIcon from "../components/icons/PostgreSQL.astro";
+import PrismaIcon from "../components/icons/Prisma.astro";
 
 const PROJECTS = [
   {
+    title: "Sistema de gestion de permisos (Backend)",
+    description: "API REST con NestJs, PostgreSQL y Prisma para la gestión de permisos y usuarios.",
+    source: "https://github.com/Alder-dev/Sysges/tree/main/backend",
+    image: "/img/comfa.webp",
+    tags: [
+      { name: "TypeScript", icon: TsIcon },
+      { name: "NestJs", icon: NestIcon },
+      { name: "PostgreSQL", icon: PostgreSQLIcon },
+      { name: "Prisma", icon: PrismaIcon },
+    ]
+  },
+  {
     title: "React Peliculas",
     description:
-      "Aplicación web de peliculas: Desarrollo con React, TailwindCss, TypeScript y Asp.NET Core para la gestión de peliculas y usuarios.",
+      "Aplicación web de peliculas: Desarrollo con TypeScript,ReactJs, TailwindCss, Asp.NET Core y Entity Framework para la gestión de peliculas y usuarios.",
     source: "https://github.com/Alder-dev/react-peliculas",
     sourcebk: "https://github.com/Alder-dev/peliculasApi",
     url: "https://react-peliculas-rho.vercel.app",
     image: "/img/peliculas.webp",
     tags: [
-      { name: "TypeScript", icon: TsIcon },
-      { name: "React", icon: ReactIcon },
+      { name: "ReactJs", icon: ReactIcon },
       { name: "TailwindCss", icon: TailwindIcon },
       { name: "ASP.NET Core", icon: ASPIcon },
       { name: "SQL", icon: SQLIcon },
