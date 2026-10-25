@@ -22,8 +22,22 @@ import NestIcon from "../components/icons/Nest.astro";
 import PostgreSQLIcon from "../components/icons/PostgreSQL.astro";
 import PrismaIcon from "../components/icons/Prisma.astro";
 import IconIA from "../components/icons/IA.astro";
+import NodeIcon from "../components/icons/Node.astro";
 
 const PROJECTS = [
+  {
+    title: "Nos Sumamos",
+    description: "Plataforma colaborativa y PWA de red solidaria y gestión de emergencias humanitarias en tiempo real. Permite la búsqueda y reporte de personas desaparecidas, mapeo interactivo de afectaciones con geolocalización GPS, registro de albergues y centros de acopio, alertas viales, generación de reportes oficiales en PDF y coordinación de voluntariado y apoyo psicológico - React, TypeScript, Node.js, Express, PostgreSQL, Leaflet, PWA.",
+    source: "https://nossumamos.vercel.app",
+    url: "https://nossumamos.vercel.app",
+    image: "/img/nossumamos.webp",
+    tags: [
+      { name: "React", icon: ReactIcon },
+      { name: "TypeScript", icon: TsIcon },
+      { name: "Node.js", icon: NodeIcon },
+      { name: "PostgreSQL", icon: PostgreSQLIcon },
+    ],
+  },
   {
     title: "Detamor",
     description: "Catálogo de productos desarrollado con tecnologías web y backend estructurado en Python. Con asistente chatbot que facilita la compra de productos para el usuario - FastAPI, React, TailwindCSS, Api Groq (Llama 3.3 70B).",
